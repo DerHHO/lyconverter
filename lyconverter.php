@@ -17,7 +17,7 @@ class LYConverter {
 					$fnpur=$info->getBasename(".$extension");
 					$fnnew="$fnpur-new.$extension";
 					if($extension=="ly"||$extension=="ily") {
-						$command="convert-ly $f > $fnnew";
+						$command="convert-ly '$f' > '$fnnew'";
 						echo "\n-----\n".getcwd()."\nKommando: ".$command."\n";
 						shell_exec($command);
 						$info_n=new SplFileInfo($fnnew);
